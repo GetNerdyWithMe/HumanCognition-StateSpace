@@ -70,3 +70,18 @@ This model is intentionally simplified and is not intended to capture the full b
 
 Despite these limitations, the framework is useful for conceptual exploration, hypothesis generation, and reasoning about trade-offs in learning, fatigue, and recovery under restraint.
 
+
+# Plot results
+time = np.arange(T)
+
+plt.figure(figsize = (8, 5))
+plt.plot(time, cognitive_capacity, label = "Cognitive Capacity C(t)")
+plt.plot(time, learning_efficiency, label = "Learning Efficiency L(t)", linestyle = "--")
+
+plt.xlabel("Time (days)")
+plt.ylabel("Normalized Value")
+plt.title("Cognitive Capacity and Learning Efficiency Under Sleep Debt")
+plt.legend()
+plt.tight_layout()
+plt.show()
+
