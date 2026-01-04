@@ -31,3 +31,42 @@ Understanding cognition as a dynamic system has implications for:
 
 ## Status
 Initial conceptual model and prototype simulation.
+
+## Model Assumptions and Equations
+This model treats human cognition as a resource-limited dynamical system evolving over discrete time.
+
+### State Variables
+- Sleep debt S(t)
+- Cognitive capacity C(t)
+- Learning efficiency L(t)
+
+### Core Assumptions
+- Cognitive capacity degrades as cumulative sleep debt increases.
+- Recovery exhibits diminishing returns as sleep debt grows.
+- Learning efficiency is bounded and proportional to available cognitive capacity.
+- Human performance is inherently noisy and variable.
+
+### Update Equations (Conceptual)
+
+Sleep debt accumulation:
+S(t+1) = S(t) + α
+
+Cognitive capacity update:
+C(t+1) = C(t) - β ⋅ S(t) + γ ⋅ e ^ (—S(t)) + ε
+
+Learning efficiency:
+L(t) = clamp(C(t), 0, 1)
+
+where α represents daily sleep loss, β represents cognitive degradation sensitivity, γ represents recovery strength, and ε represents stochastic noise.
+
+### Limitations
+
+This model is intentionally simplified and is not intended to capture the full biological or psychological complexity of human cognition.
+- The state variables represent abstracted constructs rather than directly measurable neurobiological quantities.
+- Parameter values (α, β, γ, ε) are illustrative and not empirically fitted to individual-level data.
+- The model assumes time-invariant dynamics over time, ignoring circadian effects, task heterogeneity, and inter-individual variability.
+- Recovery dynamics are modeled as a smooth nonlinear function and do not explicitly represent sleep archetecture, neurochemical processes, or long-term adaptation.
+- Stochastic noise is modeled as Guassian and independent across time steps, which might not reflect structured or autocorrelated sources of variability in real-world cognition.
+
+Despite these limitations, the framework is useful for conceptual exploration, hypothesis generation, and reasoning about trade-offs in learning, fatigue, and recovery under restraint.
+
