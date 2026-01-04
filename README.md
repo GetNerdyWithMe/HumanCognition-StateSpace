@@ -72,6 +72,7 @@ Despite these limitations, the framework is useful for conceptual exploration, h
 
 
 # Plot results
+```python
 time = np.arange(T)
 
 plt.figure(figsize = (8, 5))
@@ -83,5 +84,5 @@ plt.ylabel("Normalized Value")
 plt.title("Cognitive Capacity and Learning Efficiency Under Sleep Debt")
 plt.legend()
 plt.tight_layout()
-plt.show()
+plt.show()'''
 
