@@ -52,7 +52,7 @@ Sleep debt accumulation:
 S(t+1) = S(t) + α
 
 Cognitive capacity update:
-C(t+1) = C(t) - β ⋅ S(t) + γ ⋅ e ^ (—S(t)) + ε
+C(t+1) = C(t) - β * S(t) + γ * e ^ (—λ * S(t)) + ε
 
 Learning efficiency:
 L(t) = clamp(C(t), 0, 1)
@@ -68,7 +68,7 @@ x(t) = [ S(t), C(t) ]
 
 The system evolves according to a nonlinear update function:
 x(t+1) = f(x(t)) + noise
-where the deterministiccomponent f(.) is defined as:
+where the deterministic component f(.) is defined as:
 S(t+1) = S(t) + α
 C(t+1) = C(t) - β * S(t) + γ * exp(-λ * S(t)) + ε
 
