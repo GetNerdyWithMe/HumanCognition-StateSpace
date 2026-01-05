@@ -59,6 +59,25 @@ L(t) = clamp(C(t), 0, 1)
 
 where α represents daily sleep loss, β represents cognitive degradation sensitivity, γ represents recovery strength, and ε represents stochastic noise.
 
+State-Space Formulation
+---------------------------
+This model can be expressed as a discreet-time nonlinear state-space system.
+The system state at a time t is represented as a vector consisting of sleep debt and cognitive capacity.
+State vector:
+x(t) = [ S(t), C(t) ]
+
+The system evolves according to a nonlinear update function:
+x(t+1) = f(x(t)) + noise
+where the deterministiccomponent f(.) is defined as:
+S(t+1) = S(t) + α
+C(t+1) = C(t) - β * S(t) + γ * exp(-λ * S(t)) + ε
+
+Learning efficiency is treated as an output of the system rather than a state variable.
+L(t) = clamp(C(t), 0, 1)
+
+Framing cognition as a state-space system makes it possible to analyze stability, sensitivity, and regime changes using tools from control theory and nonlinear dynamics.
+This shifts the interpretation away from purely descriptive or correlational explanations.
+
 ### Limitations
 
 This model is intentionally simplified and is not intended to capture the full biological or psychological complexity of human cognition.
