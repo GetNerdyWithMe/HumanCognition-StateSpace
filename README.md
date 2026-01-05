@@ -78,6 +78,17 @@ L(t) = clamp(C(t), 0, 1)
 Framing cognition as a state-space system makes it possible to analyze stability, sensitivity, and regime changes using tools from control theory and nonlinear dynamics.
 This shifts the interpretation away from purely descriptive or correlational explanations.
 
+Equilibrium and Stability Intuition
+------------------------
+Equilibrium points correspond to cognitive states in which sleep debt and cognitive capacity remain approximately constant over time.
+When daily sleep loss is persistent (α > 0), sleep debt increases monotonically and the system does not admit a stable equilibrium.
+In this regime, cognitive capacity is continuously pushed away from steady-state, leading to progressive degradation instead of recovery.
+If sleep debt accumulation is small or intermittently offset by recovery, the system may operate near a quasi-equilibrium where cognitive degradation and recovery approximately balance.
+The Exponential recovery term introduces nonlinear curvature into the dynamics meaning recovery effectiveness decreases as sleep debt grows.
+As a result, small increases in sleep debt can produce disproportionately large reductions in cognitive stability once an imperative regime is crossed.
+From a systems perspective, this behavior reflects a transition from a stable operating regime to an unstable one, as opposed to a smooth or linear decline in performance.
+
+
 ### Limitations
 
 This model is intentionally simplified and is not intended to capture the full biological or psychological complexity of human cognition.
